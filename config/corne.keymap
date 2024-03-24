@@ -99,6 +99,8 @@
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                          &volume  &mo 1  &kp SPACE    &kp RET  &mo 2  &vscorll
             >;
+            sensor-bindings = <&volume>;
+            sensor-bindings = <&vscorll>;
         };
 
         lower_layer {
@@ -114,6 +116,8 @@
 &kp LSHFT   &openvscode   &teams        &chrome       &smartgit     &trans          &trans    &trans    &trans    &trans     &kp PAGE_DOWN  &kp END
                                         &varrow      &trans        &kp SPACE       &kp RET   &trans    &harrow
             >;
+            sensor-bindings = <&varrow>;
+            sensor-bindings = <&harrow>;
         };
 
         raise_layer {
@@ -129,6 +133,8 @@
 &kp LSHFT  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                        &varrow      &trans        &kp SPACE       &kp RET    &trans     &harrow
             >;
+            sensor-bindings = <&varrow>;
+            sensor-bindings = <&harrow>;
         };
     };
 };
