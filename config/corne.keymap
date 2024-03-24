@@ -46,6 +46,43 @@
         };
     };
 
+    behaviors {
+        volume: volume {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "VOLUME";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOLUME_UP>, <&kp C_VOLUME_DOWN>;
+        };
+
+        brightness: brightness {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "BRIGHTNESS";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_BRIGHTNESS_INC>, <&kp C_BRIGHTNESS_DEC>;
+        };
+
+        vscorll: vscorll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "VSCORLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_AC_SCROLL_UP>, <&kp C_AC_SCROLL_DOWN>;
+        };
+
+        varrow: varrow {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "VARROW";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp UP_ARROW>, <&kp DOWN_ARROW>;
+        };
+
+        harrow: harrow {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "HARROW";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LEFT_ARROW>, <&kp RIGHT_ARROW>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
