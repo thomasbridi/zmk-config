@@ -151,6 +151,28 @@
             #binding-cells = <0>;
             bindings = <&kp U>, <&uaccento>;
         };
+
+        lh_pht: lh_pht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LH_PHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <14 15 16 17>;
+        };
+
+        rh_pht: rh_pht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RH_PHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <14 15 16 17 18 19 20 21>;
+        };
     };
 
     keymap {
