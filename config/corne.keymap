@@ -9,6 +9,43 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp V &kp S &kp C &kp O &kp D &kp E &kp ENTER>;
+            label = "NEW_MACRO";
+        };
+
+        openvscode: openvscode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "OPENVSCODE";
+        };
+
+        teams: teams {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
+            label = "TEAMS";
+        };
+
+        chrome: chrome {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp C &kp H &kp R &kp O &kp M &kp E &kp ENTER>;
+            label = "CHROME";
+        };
+
+        smartgit: smartgit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp S &kp M &kp A &kp R &kp T &kp G &kp I &kp T &kp ENTER>;
+            label = "SMARTGIT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -37,7 +74,7 @@
             bindings = <
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0         &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PAGE_UP    &kp HOME
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &kp PAGE_DOWN  &kp END
+&kp LSHFT   &openvscode   &teams        &chrome       &smartgit     &trans          &trans    &trans    &trans    &trans     &kp PAGE_DOWN  &kp END
                                         &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
             >;
         };
