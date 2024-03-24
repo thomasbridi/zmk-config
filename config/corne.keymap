@@ -79,6 +79,13 @@
             bindings = <&kp SQT &kp U>;
             label = "UACCENTO";
         };
+
+        settings: settings {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp S &kp E &kp T &kp T &kp I &kp N &kp G &kp S &kp ENTER>;
+            label = "SETTINGS";
+        };
     };
 
     behaviors {
@@ -156,10 +163,10 @@
 
         lower_layer {
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7  &kp F8          &kp F9          &kp F10    &kp F11        &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans          &kp UP          &trans     &kp PAGE_UP    &kp HOME
-&kp LSHFT   &openvscode   &teams        &chrome       &smartgit     &trans          &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp END
-                                        &trans        &trans        &trans          &trans  &trans          &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7           &kp F8          &kp F9          &kp F10    &kp F11        &kp F12
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PRINTSCREEN  &trans          &kp UP          &trans     &kp PAGE_UP    &kp HOME
+&kp LSHFT   &openvscode   &teams        &chrome       &smartgit     &settings       &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp END
+                                        &trans        &trans        &trans          &trans           &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -167,10 +174,10 @@
 
         raise_layer {
             bindings = <
-&kp TAB    &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                       &trans        &trans        &trans          &trans     &trans     &trans
+&kp TAB        &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &kp CARET  &kp AMPS   &kp ASTRK      &kp LPAR          &kp RPAR           &kp APOSTROPHE
+&kp BACKSLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp MINUS  &kp EQUAL  &kp KP_DIVIDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE
+&kp PIPE       &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp UNDER  &kp PLUS   &kp QUESTION   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
+                                           &trans        &trans        &trans          &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
