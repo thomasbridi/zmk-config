@@ -9,14 +9,151 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp V &kp S &kp C &kp O &kp D &kp E &kp ENTER>;
+            label = "NEW_MACRO";
+        };
+
+        openvscode: openvscode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "OPENVSCODE";
+        };
+
+        teams: teams {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp T &kp E &kp A &kp M &kp S &kp ENTER>;
+            label = "TEAMS";
+        };
+
+        chrome: chrome {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp C &kp H &kp R &kp O &kp M &kp E &kp ENTER>;
+            label = "CHROME";
+        };
+
+        smartgit: smartgit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp S &kp M &kp A &kp R &kp T &kp G &kp I &kp T &kp ENTER>;
+            label = "SMARTGIT";
+        };
+
+        aaccento: aaccento {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp A>;
+            label = "AACCENTO";
+        };
+
+        eaccento: eaccento {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp E>;
+            label = "EACCENTO";
+        };
+
+        iaccento: iaccento {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp I>;
+            label = "IACCENTO";
+        };
+
+        oaccento: oaccento {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp O>;
+            label = "OACCENTO";
+        };
+
+        uaccento: uaccento {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp U>;
+            label = "UACCENTO";
+        };
+
+        settings: settings {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp S &kp E &kp T &kp T &kp I &kp N &kp G &kp S &kp ENTER>;
+            label = "SETTINGS";
+        };
+    };
+
+    behaviors {
+        aaccentoB: aaccentoB {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AACCENTOB";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&aaccento>;
+        };
+
+        eaccentoB: eaccentoB {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EACCENTOB";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&eaccento>;
+        };
+
+        iaccentoB: iaccentoB {
+            compatible = "zmk,behavior-tap-dance";
+            label = "IACCENTOB";
+            #binding-cells = <0>;
+            bindings = <&kp I>, <&iaccento>;
+        };
+
+        oaccentoB: oaccentoB {
+            compatible = "zmk,behavior-tap-dance";
+            label = "OACCENTOB";
+            #binding-cells = <0>;
+            bindings = <&kp O>, <&oaccento>;
+        };
+
+        uaccentoB: uaccentoB {
+            compatible = "zmk,behavior-tap-dance";
+            label = "UACCENTOB";
+            #binding-cells = <0>;
+            bindings = <&kp U>, <&uaccento>;
+        };
+
+        lh_pht: lh_pht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LH_PHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <14 15 16 17>;
+        };
+
+        rh_pht: rh_pht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RH_PHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <14 15 16 17 18 19 20 21>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q       &kp W                 &kp E                   &kp R               &kp T                 &kp Y                &kp U                &kp I                    &kp O             &kp P     &kp ESC
-&kp MINUS  &kp A       &kp S                 &kp D                   &kp F               &kp G                 &kp H                &kp J                &kp K                    &kp L                  &kp SEMI  &kp SQT
+&kp TAB    &kp Q       &kp W                 &eaccentoB              &kp R               &kp T                 &kp Y                &uaccentoB           &iaccentoB               &oaccentoB             &kp P     &kp ESC
+&kp MINUS  &aaccentoB  &lh_pht LEFT_SHIFT S  &lh_pht LEFT_CONTROL D  &lh_pht LEFT_WIN F  &lh_pht LEFT_ALT G    &rh_pht RIGHT_ALT H  &rh_pht RIGHT_WIN J  &rh_pht RIGHT_CONTROL K  &rh_pht RIGHT_SHIFT L  &kp SEMI  &kp SQT
 &kp EQUAL  &kp Z       &kp X                 &kp C                   &kp V               &kp B                 &kp N                &kp M                &kp COMMA                &kp DOT                &kp FSLH  &kp EXCLAMATION
                                              &mo 1                   &kp LEFT_CONTROL    &kp SPACE             &kp RET              &kp BACKSPACE        &mo 2
             >;
@@ -28,7 +165,7 @@
             bindings = <
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7           &kp F8          &kp F9          &kp F10    &kp F11        &kp F12
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PRINTSCREEN  &trans          &kp UP          &trans     &kp PAGE_UP    &kp HOME
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans       &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp END
+&kp LSHFT   &openvscode   &teams        &chrome       &smartgit     &settings       &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp END
                                         &trans        &trans        &trans          &trans           &trans          &trans
             >;
 
