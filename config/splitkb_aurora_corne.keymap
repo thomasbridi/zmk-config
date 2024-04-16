@@ -147,10 +147,10 @@
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q       &kp W                 &eaccentoB              &kp R               &kp T                 &kp Y                &uaccentoB           &iaccentoB               &oaccentoB             &kp P     &kp ESC
-&kp MINUS  &aaccentoB  &lh_pht LEFT_SHIFT S  &lh_pht LEFT_CONTROL D  &lh_pht LEFT_WIN F  &lh_pht LEFT_ALT G    &rh_pht RIGHT_ALT H  &rh_pht RIGHT_WIN J  &rh_pht RIGHT_CONTROL K  &rh_pht RIGHT_SHIFT L  &kp SEMI  &kp SQT
-&kp EQUAL  &kp Z       &kp X                 &kp C                   &kp V               &kp B                 &kp N                &kp M                &kp COMMA                &kp DOT                &kp FSLH  &kp EXCLAMATION
-                                             &mo 1                   &kp LEFT_CONTROL    &kp SPACE             &kp RET              &kp BACKSPACE        &mo 2
+&kp TAB         &kp Q       &kp W                 &eaccentoB              &kp R               &kp T                 &kp Y                &uaccentoB           &iaccentoB               &oaccentoB             &kp P      &kp ESC
+&kp MINUS       &aaccentoB  &lh_pht LEFT_SHIFT S  &lh_pht LEFT_CONTROL D  &lh_pht LEFT_WIN F  &lh_pht LEFT_ALT G    &rh_pht RIGHT_ALT H  &rh_pht RIGHT_WIN J  &rh_pht RIGHT_CONTROL K  &rh_pht RIGHT_SHIFT L  &kp EQUAL  &kp SQT
+&kp LEFT_SHIFT  &kp Z       &kp X                 &kp C                   &kp V               &kp B                 &kp N                &kp M                &kp COMMA                &kp DOT                &kp FSLH   &kp EXCLAMATION
+                                                  &mo 1                   &kp LEFT_CONTROL    &kp SPACE             &kp RET              &kp BACKSPACE        &mo 2
             >;
 
             //sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
