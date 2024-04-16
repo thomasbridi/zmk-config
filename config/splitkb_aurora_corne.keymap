@@ -10,18 +10,11 @@
 
 / {
     macros {
-        new_macro: new_macro {
+        openvscode: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_WIN &kp V &kp S &kp C &kp O &kp D &kp E &kp ENTER>;
             label = "NEW_MACRO";
-        };
-
-        openvscode: openvscode {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "OPENVSCODE";
         };
 
         teams: teams {
@@ -130,9 +123,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             hold-trigger-key-positions = <14 15 16 17>;
+            flavor = "tap-preferred";
         };
 
         rh_pht: rh_pht {
@@ -141,9 +135,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            hold-trigger-key-positions = <14 15 16 17 18 19 20 21>;
+            hold-trigger-key-positions = <18 19 20 21>;
+            flavor = "tap-preferred";
         };
     };
 
