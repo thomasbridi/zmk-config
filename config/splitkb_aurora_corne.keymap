@@ -165,9 +165,9 @@
 
         lower_layer {
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7           &kp F8          &kp F9          &kp F10     &kp F11        &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PRINTSCREEN  &trans          &kp UP          &kp DELETE  &kp PAGE_UP    &kp HOME
-&files      &openvscode   &teams        &chrome       &smartgit     &settings       &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &kp PAGE_DOWN  &kp END
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7           &kp F8          &kp F9          &kp F10    &kp F11        &kp F12
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PRINTSCREEN  &trans          &kp UP          &trans     &kp PAGE_UP    &kp HOME
+&files      &openvscode   &teams        &chrome       &smartgit     &settings       &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp END
                                         &trans        &trans        &trans          &trans           &trans          &trans
             >;
 
@@ -176,10 +176,10 @@
 
         layer_3 {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7     &kp N8                &kp N9            &kp N0             &trans
-&trans  &trans        &trans        &trans        &trans        &trans    &kp MINUS     &kp EQUAL  &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE
-&trans  &trans        &trans        &trans        &trans        &trans    &trans        &trans     &trans                &trans            &trans             &trans
-                                    &trans        &trans        &trans    &trans        &trans     &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7      &kp N8                &kp N9            &kp N0             &trans
+&trans  &trans        &trans        &trans        &trans        &trans    &kp MINUS     &kp EQUAL   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE
+&trans  &trans        &trans        &trans        &trans        &trans    &trans        &trans      &trans                &trans            &trans             &trans
+                                    &trans        &trans        &trans    &trans        &kp DELETE  &trans
             >;
         };
 
