@@ -79,6 +79,13 @@
             bindings = <&kp LEFT_WIN &kp S &kp E &kp T &kp T &kp I &kp N &kp G &kp S &kp ENTER>;
             label = "SETTINGS";
         };
+
+        files: files {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp F &kp I &kp L &kp E &kp S &kp ENTER>;
+            label = "FILES";
+        };
     };
 
     behaviors {
@@ -160,7 +167,7 @@
             bindings = <
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7           &kp F8          &kp F9          &kp F10    &kp F11        &kp F12
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PRINTSCREEN  &trans          &kp UP          &trans     &kp PAGE_UP    &kp HOME
-&kp LSHFT   &openvscode   &teams        &chrome       &smartgit     &settings       &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp END
+&files      &openvscode   &teams        &chrome       &smartgit     &settings       &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp END
                                         &trans        &trans        &trans          &trans           &trans          &trans
             >;
 
