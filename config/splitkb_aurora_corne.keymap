@@ -149,7 +149,7 @@
             bindings = <
 &kp TAB         &kp Q       &kp W                 &eaccentoB              &kp R               &kp T                 &kp Y                &uaccentoB           &iaccentoB               &oaccentoB             &kp P          &kp ESC
 &kp LEFT_ALT    &aaccentoB  &lh_pht LEFT_SHIFT S  &lh_pht LEFT_CONTROL D  &lh_pht LEFT_WIN F  &lh_pht LEFT_ALT G    &rh_pht RIGHT_ALT H  &rh_pht RIGHT_WIN J  &rh_pht RIGHT_CONTROL K  &rh_pht RIGHT_SHIFT L  &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &kp Z       &kp X                 &kp C                   &kp V               &kp B                 &kp N                &kp M                &kp COMMA                &kp DOT                &kp FSLH       &kp EXCLAMATION
+&kp LEFT_SHIFT  &kp Z       &kp X                 &kp C                   &kp V               &kp B                 &kp N                &kp M                &kp COMMA                &kp DOT                &kp FSLH       &kp RIGHT_SHIFT
                                                   &mo 1                   &kp LEFT_CONTROL    &kp SPACE             &kp RET              &kp BACKSPACE        &mo 2
             >;
 
@@ -165,6 +165,15 @@
             >;
 
             //sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7     &kp N8                &kp N9            &kp N0             &trans
+&trans  &trans        &trans        &trans        &trans        &trans    &kp MINUS     &kp EQUAL  &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE
+&trans  &trans        &trans        &trans        &trans        &trans    &trans        &trans     &trans                &trans            &trans             &trans
+                                    &trans        &trans        &trans    &trans        &trans     &trans
+            >;
         };
 
         raise_layer {
