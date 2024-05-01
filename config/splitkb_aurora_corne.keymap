@@ -134,6 +134,7 @@
             bindings = <&aaccento>;
             key-positions = <13>;
             layers = <0>;
+            timeout-ms = <200>;
         };
 
         accent_e_combo {
