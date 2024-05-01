@@ -41,70 +41,35 @@
         aaccento: aaccento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT &kp RSHFT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N5>,
-                <&macro_release>,
-                <&kp RSHFT &kp RALT>;
-
+            bindings = <&kp A &kp SQT>;
             label = "AACCENTO";
         };
 
         eaccento: eaccento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT &kp LSHIFT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
-                <&macro_release>,
-                <&kp LSHIFT &kp RALT>;
-
+            bindings = <&kp E &kp SQT>;
             label = "EACCENTO";
         };
 
         iaccento: iaccento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT &kp LSHFT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_7>,
-                <&macro_release>,
-                <&kp LSHFT &kp RIGHT_ALT>;
-
+            bindings = <&kp I &kp SQT>;
             label = "IACCENTO";
         };
 
         oaccento: oaccento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT &kp LSHFT>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_4 &kp KP_NUMBER_3>,
-                <&macro_release>,
-                <&kp LSHFT &kp RIGHT_ALT>;
-
+            bindings = <&kp O &kp SQT>;
             label = "OACCENTO";
         };
 
         uaccento: uaccento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT &kp LSHIFT>,
-                <&macro_press>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_5 &kp KP_NUMBER_0>,
-                <&macro_press>,
-                <&kp LSHIFT &kp RIGHT_ALT>;
-
+            bindings = <&kp U &kp SQT>;
             label = "UACCENTO";
         };
 
