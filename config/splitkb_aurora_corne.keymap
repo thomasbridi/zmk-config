@@ -48,20 +48,27 @@
                 <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N5>,
                 <&macro_release>,
                 <&kp RSHFT &kp RALT>;
+
             label = "AACCENTO";
         };
 
         eaccento: eaccento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp E &kp SQT>;
+            bindings = <&macro_press>, <&kp E &kp SQT>, <&macro_tap>, <&kp E>;
+
             label = "EACCENTO";
         };
 
         iaccento: iaccento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp I &kp SQT>;
+            bindings =
+                <&macro_tap_time 200>,
+                <&kp I &kp SQT>,
+                <&macro_press>,
+                <&kp I>;
+
             label = "IACCENTO";
         };
 
