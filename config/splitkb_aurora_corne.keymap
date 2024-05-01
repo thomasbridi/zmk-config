@@ -55,20 +55,14 @@
         eaccento: eaccento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp E &kp SQT>, <&macro_tap>, <&kp E>;
-
+            bindings = <&kp E &kp SQT>;
             label = "EACCENTO";
         };
 
         iaccento: iaccento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap_time 200>,
-                <&kp I &kp SQT>,
-                <&macro_press>,
-                <&kp I>;
-
+            bindings = <&kp I &kp SQT>;
             label = "IACCENTO";
         };
 
@@ -125,42 +119,20 @@
             hold-trigger-key-positions = <18 19 20 21>;
             flavor = "tap-preferred";
         };
-    };
 
-    combos {
-        compatible = "zmk,combos";
+        ccento: ccento {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CCENTO";
+            bindings = <&aaccento>, <&kp>;
 
-        accent_a_combo {
-            bindings = <&aaccento>;
-            key-positions = <13>;
-            layers = <0>;
-            timeout-ms = <200>;
-        };
-
-        accent_e_combo {
-            bindings = <&eaccento>;
-            key-positions = <3>;
-            layers = <0>;
-        };
-
-        accent_i_combo {
-            bindings = <&iaccento>;
-            key-positions = <8>;
-            layers = <0>;
-        };
-
-        accent_o_combo {
-            bindings = <&oaccento>;
-            key-positions = <9>;
-            layers = <0>;
-        };
-
-        accent_u_combo {
-            bindings = <&uaccento>;
-            key-positions = <7>;
-            layers = <0>;
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <13>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
         };
     };
+
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
