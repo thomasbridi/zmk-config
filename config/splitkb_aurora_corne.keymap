@@ -102,41 +102,6 @@
     };
 
     behaviors {
-        aaccentoB: aaccentoB {
-            compatible = "zmk,behavior-tap-dance";
-            label = "AACCENTOB";
-            #binding-cells = <0>;
-            bindings = <&kp A>, <&aaccento>;
-        };
-
-        eaccentoB: eaccentoB {
-            compatible = "zmk,behavior-tap-dance";
-            label = "EACCENTOB";
-            #binding-cells = <0>;
-            bindings = <&kp E>, <&eaccento>;
-        };
-
-        iaccentoB: iaccentoB {
-            compatible = "zmk,behavior-tap-dance";
-            label = "IACCENTOB";
-            #binding-cells = <0>;
-            bindings = <&kp I>, <&iaccento>;
-        };
-
-        oaccentoB: oaccentoB {
-            compatible = "zmk,behavior-tap-dance";
-            label = "OACCENTOB";
-            #binding-cells = <0>;
-            bindings = <&kp O>, <&oaccento>;
-        };
-
-        uaccentoB: uaccentoB {
-            compatible = "zmk,behavior-tap-dance";
-            label = "UACCENTOB";
-            #binding-cells = <0>;
-            bindings = <&kp U>, <&uaccento>;
-        };
-
         lh_pht: lh_pht {
             compatible = "zmk,behavior-hold-tap";
             label = "LH_PHT";
@@ -168,26 +133,31 @@
         accent_a_combo {
             bindings = <&aaccento>;
             key-positions = <13>;
+            layers = <0>;
         };
 
         accent_e_combo {
             bindings = <&eaccento>;
             key-positions = <3>;
+            layers = <0>;
         };
 
         accent_i_combo {
             bindings = <&iaccento>;
             key-positions = <8>;
+            layers = <0>;
         };
 
         accent_o_combo {
             bindings = <&oaccento>;
             key-positions = <9>;
+            layers = <0>;
         };
 
         accent_u_combo {
             bindings = <&uaccento>;
             key-positions = <7>;
+            layers = <0>;
         };
     };
 
