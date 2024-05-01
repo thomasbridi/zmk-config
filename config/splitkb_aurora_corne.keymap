@@ -57,7 +57,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RALT &kp LEFT_SHIFT>,
+                <&kp RALT &kp LSHIFT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
                 <&macro_release>,
@@ -75,7 +75,7 @@
                 <&macro_tap>,
                 <&kp KP_NUMBER_0 &kp KP_NUMBER_2 &kp KP_NUMBER_3 &kp KP_NUMBER_7>,
                 <&macro_release>,
-                <&kp LSHIFT &kp RIGHT_ALT>;
+                <&kp LSHFT &kp RIGHT_ALT>;
 
             label = "IACCENTO";
         };
